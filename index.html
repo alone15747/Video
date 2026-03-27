@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🧚 Pari Ki Duniya</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Quicksand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Pari Ki Duniya - A magical fairy swipe game. Developed by Ishant.">
+  <title>🧚 Pari Ki Duniya</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<canvas id="c"></canvas>
+  <!-- ══════════════════════════════════
+       GAME CANVAS
+  ══════════════════════════════════ -->
+  <canvas id="c"></canvas>
 
-<div id="ui" style="display:none">
-  <div>⭐ <span id="sc">0</span></div>
-  <div>
-    <span id="h0">💖</span>
-    <span id="h1">💖</span>
-    <span id="h2">💖</span>
+  <!-- ══════════════════════════════════
+       HUD (Score / Lives / Best)
+  ══════════════════════════════════ -->
+  <div id="ui" style="display:none">
+    <div class="ui-box">⭐ <span id="sc">0</span></div>
+    <div class="ui-box">
+      <span class="heart" id="h0">💖</span>
+      <span class="heart" id="h1">💖</span>
+      <span class="heart" id="h2">💖</span>
+    </div>
+    <div class="ui-box">🏆 <span id="bs">0</span></div>
   </div>
-  <div>🏆 <span id="bs">0</span></div>
-</div>
 
-<button id="pause-btn">⏸ Pause</button>
+  <!-- Pause Button -->
+  <button id="pause-btn">⏸ Pause</button>
 
-<!-- TITLE -->
-<div class="screen" id="title">
-  <h1>🧚 Pari Ki Duniya</h1>
-  <button id="play-btn">✨ Khelo ✨</button>
+  <!-- Level Badge -->
+  <div id="lvl">🌟 Level 2!</div>
 
-  <!-- 👇 Developer Credit -->
-  <div class="credit">Developed by Ishant 💻</div>
-</div>
+  <!-- ══════════════════════════════════
+       TITLE SCREEN
+  ══════════════════════════════════ -->
+  <div class="screen" id="title">
+    <div class="fairy-big">🧚‍♀️</div>
+    <h1>Pari Ki<br>Duniya</h1>
+    <div class="tagline">MAGICAL FAIRY GAME</div>
 
-<!-- RESULT -->
-<div class="screen off" id="result">
-  <h2 id="res-title">Game Over!</h2>
-  <div id="res-info"></div>
-  <button id="retry-btn">🔄 Retry</button>
-</div>
+    <div class="hint-box">
+      🧚 Upar se pariyan girengi<br>
+      👆 Unhe <b>swipe</b> karke hatao<br>
+      🕷️ Bure creatures se bachao<br>
+      💎 Rare gem = 50 points!
+    </div>
 
-<script src="script.js"></script>
+    <button class="btn btn-main" id="play-btn">✨ Khelo ✨</button>
+    <div style="color:rgba(255,255,255,0.28);font-size:12px">Pari ke liye banaya gaya 💖</div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       RESULT SCREEN
+  ══════════════════════════════════ -->
+  <div class="screen off" id="result">
+    <div class="res-icon" id="res-icon">🧚‍♀️</div>
+    <div class="res-title" id="res-title">Game Over!</div>
+    <div class="res-info"  id="res-info"></div>
+    <button class="btn btn-main" id="retry-btn">🔄 Phir Khelo</button>
+    <button class="btn btn-sec"  id="home-btn">🏠 Home</button>
+  </div>
+
+  <!-- ══════════════════════════════════
+       DEVELOPER CREDIT
+  ══════════════════════════════════ -->
+  <div id="dev-credit">Developed by Ishant ✨</div>
+
+  <!-- ══════════════════════════════════
+       SCRIPT
+  ══════════════════════════════════ -->
+  <script src="script.js"></script>
+
 </body>
 </html>
